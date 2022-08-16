@@ -1,0 +1,11 @@
+.card{
+    margin: 0 40px;   
+   }
+
+   span{
+    font-weight: 600;    
+   }
+
+   span::before{
+    content:"• "
+   }

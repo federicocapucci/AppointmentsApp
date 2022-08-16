@@ -1,0 +1,16 @@
+<div class="card bg-light" *ngIf="appointmentsListChild.length === 0">
+    <div class="card-body">
+        <h5 class="card-title text-center">No appointments to show</h5>
+    </div>
+</div>
+
+<div class="card bg-light mb-3" *ngFor="let appointment of appointmentsListChild; let i = index">
+    <div class="card-body">
+        <p class="card-text"><span>Name: </span> {{appointment.name}} </p>
+        <p class="card-text"><span>Date: </span> {{appointment.date}} </p>
+        <p class="card-text"><span>Time: </span> {{appointment.time}} </p>
+        <p class="card-text"><span>Symptoms: </span> {{appointment.symptoms}} </p>
+        <button style="width: 100%;font-weight: bold" class="btn btn-danger btn-block" 
+        (click)="sendIndexForDeletion(i)">Delete</button>
+    </div>
+</div>
